@@ -209,9 +209,9 @@ Nilai RMSE SVD model diatas merupakan hasil perhitungan dari
 <code> RMSE = round((((rmse_data.Avg_actual_rating - rmse_data.Avg_predicted_ratings) ** 2).mean() ** 0.5),5) <code>
 
 
-  ## Conclusion
-  Sistem pemberi rekomendasi berbasis popularitas tidak dipersonalisasi dan rekomendasi didasarkan pada jumlah frekuensi, yang mungkin tidak sesuai untuk pengguna. Model berbasis popularitas akan merekomendasikan 5 tempat yang sama untuk semua pengguna tetapi model berbasis Collaborative Filtering telah merekomendasikan seluruh daftar yang berbeda berdasarkan peringkat pengguna.
+## Conclusion
+Sistem pemberi rekomendasi berbasis popularitas tidak dipersonalisasi dan rekomendasi didasarkan pada jumlah frekuensi, yang mungkin tidak sesuai untuk pengguna. Model berbasis popularitas akan merekomendasikan 5 tempat yang sama untuk semua pengguna tetapi model berbasis Collaborative Filtering telah merekomendasikan seluruh daftar yang berbeda berdasarkan peringkat pengguna.
 
 Collaborative Filtering Berbasis Model adalah sistem rekomendasi yang dipersonalisasi, rekomendasi didasarkan pada perilaku / interaksi pengguna di masa lalu dan tidak bergantung pada informasi tambahan apa pun. Dalam hal ini kami memiliki peringkat yang menunjukkan interaksi.
   
-  **---Ini adalah bagian akhir laporan---**
+**---Ini adalah bagian akhir laporan---**
