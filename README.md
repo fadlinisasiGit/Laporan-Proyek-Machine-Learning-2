@@ -206,7 +206,7 @@ Rumus RMSE :
 ![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/nilai%20RMSE%20svd.png?raw=true)
 
 Nilai RMSE SVD model diatas merupakan hasil perhitungan dari 
-<code> RMSE = round((((rmse_data.Avg_actual_rating - rmse_data.Avg_predicted_ratings) ** 2).mean() ** 0.5),5) <code>
+<code> RMSE = round((((rmse_data.Avg_actual_rating - rmse_data.Avg_predicted_ratings) ** 2).mean() ** 0.5),5)
 
 
 ## Conclusion
