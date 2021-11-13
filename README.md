@@ -104,21 +104,13 @@ Untuk model sistem rekomendasi untuk merekomendasikan restoran pilihan teratas, 
 
 
 ## Data Preparation
-Pada data preparation, saya perlu mengubah data pada dataset menjadi dalam bentuk matriks. Hal ini dilakukan untuk mempermudah model colab dalam teknik modeling Collaborative filtering : SVD.
 
-![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/10.png?raw=true)
+Untuk data preparation, saya menggunakan beberapa teknik yang diperlukan dalam tahapan data preparation, yaitu :
 
-Dari output diatas, fitur placeID atau ID restoran diubah menjadi pivot, dengan index userID dengan nilai rating. Dengan ini bisa terlihat user yang memberi penilaian di setiap restoran.
+- Mengubah bentuk data menjadi bentuk matriks : hal ini diperlukan untuk mempermudah model colab dalam teknik modeling Collaborative filtering : SVD. Untuk mengubah bentuk data menjadi bentuk matriks, jalankan perintah .pivot()
+- Memeriksa missing value : missing value ini adalah hilangnya beberapa data yang telah diperoleh dalam arti data yang tidak berguna dan harus di hilangkan. Untuk memeriksa missing values, ketik perintah berikut. sal.isnull().sum()
 
-![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/11.png?raw=true)
 
-Setelah mendapatkan data matriks, kita kalkulasikan densitas matriks, ini untuk melihat berapa banyak kemungkinan peringkat yang bisa diberikan dan berapa tepatnya peringkat yang diberikan. Seperti pada output diatas, terlihat bahwa banyak rating yang diberikan sekitar 884 entri, banyak kemungkinan rating sebanyak 16640, dan densitas metriks sebesar 5.32 %.
-
-Setelah selesai, kita perlu memeriksa apakah pada data terdapat missing values. Hal ini perlukan agar data yang akan dimodeling tidak kotor dan mengganggu proses modeling. Untuk memeriksa hal tersebut, kita menggunakan perintah .isnul().sum().
-
-![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/12.png?raw=true)
-
-Seperti yang terlihat pada output diatas, ternyata data kita telah bersih dan tidak ada missing values sehingga data yang digunakan siap untuk di Modeling.
 
 ## Modeling
 
@@ -135,7 +127,7 @@ Hal yang harus dilakukan menggunakan teknik ini adalah:
 - Beri peringkat berdasarkan skor
 - Rekomendasikan tempat paling populer
 
-Pada teknik ini menggunakan cara yang sederhana yaitu mengelompokkan fitur, meng agregatkan banyaknya data, lalu mereser index. Setelah itu mengsortir nilai agregat dan fitur yanng dikelompokkan. 
+Pada teknik ini menggunakan cara yang sederhana yaitu mengelompokkan fitur, meng-agregatkan banyaknya data, lalu mereset index. Setelah itu memilah nilai agregat dan fitur yanng dikelompokkan. 
 
 ![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/13.png?raw=true)
 
@@ -208,7 +200,12 @@ Rumus RMSE :
 Nilai RMSE SVD model diatas merupakan hasil perhitungan dari 
 <code> RMSE = round((((rmse_data.Avg_actual_rating - rmse_data.Avg_predicted_ratings) ** 2).mean() ** 0.5),5)
 
-
+ Berikut adalah hasil visualisasi rate error rmse pada variabel rmse_data :
+ 
+![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/plot%20rmse%201.png?raw=true)
+ 
+![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/plot%20rmse%202.png?raw=true)
+ 
 ## Conclusion
 Sistem pemberi rekomendasi berbasis popularitas tidak dipersonalisasi dan rekomendasi didasarkan pada jumlah frekuensi, yang mungkin tidak sesuai untuk pengguna. Model berbasis popularitas akan merekomendasikan 5 tempat yang sama untuk semua pengguna tetapi model berbasis Collaborative Filtering telah merekomendasikan seluruh daftar yang berbeda berdasarkan peringkat pengguna.
 
