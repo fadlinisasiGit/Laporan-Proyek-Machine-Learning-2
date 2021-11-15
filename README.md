@@ -108,7 +108,7 @@ Untuk model sistem rekomendasi untuk merekomendasikan restoran pilihan teratas, 
 Untuk data preparation, saya menggunakan beberapa teknik yang diperlukan dalam tahapan data preparation, yaitu :
 
 - Mengubah bentuk data menjadi bentuk matriks : hal ini diperlukan untuk mempermudah model colab dalam teknik modeling Collaborative filtering : SVD. Untuk mengubah bentuk data menjadi bentuk matriks, jalankan perintah .pivot()
-- Memeriksa missing value : missing value ini adalah hilangnya beberapa data yang telah diperoleh dalam arti data yang tidak berguna dan harus di hilangkan. Untuk memeriksa missing values, ketik perintah berikut. sal.isnull().sum()
+- Mengatasi missing values : missing value ini adalah hilangnya beberapa data yang telah diperoleh dalam arti data yang tidak berguna dan harus di hilangkan. Untuk memeriksa missing values, ketik perintah berikut. sal.isnull().sum()
 
 
 
@@ -198,7 +198,7 @@ Rumus RMSE :
 ![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/nilai%20RMSE%20svd.png?raw=true)
 
 Nilai RMSE SVD model diatas merupakan hasil perhitungan dari 
-<code> RMSE = round((((rmse_data.Avg_actual_rating - rmse_data.Avg_predicted_ratings) ** 2).mean() ** 0.5),5)
+<code> RMSE = round((((rmse_data.Avg_actual_rating - rmse_data.Avg_predicted_ratings) ** 2).mean() ** 0.5),5) </code>
 
  Berikut adalah hasil visualisasi rate error rmse pada variabel rmse_data :
  
