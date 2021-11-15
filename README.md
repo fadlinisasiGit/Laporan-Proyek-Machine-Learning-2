@@ -186,9 +186,34 @@ Seperti pada output diatas, terlihat bahwa ada 10 ID tempat restoran yang direko
 
 
 ## Evaluation
-Pada tahap ini, saya menggunakan metrik evaluasi RMSE (Root Mean Squared Error) yang dihitung menggunakan perhitungan matematis.
+Pada tahap ini, saya menggunakan metrik evaluasi Akurasi, Presisi, dan RMSE (Root Mean Squared Error) yang dihitung menggunakan perhitungan matematis.
 
- ` root-mean-square deviation (RMSD) atau root-mean-square error (RMSE) ` adalah aturan penilaian kuadrat yang juga mengukur besarnya rata-rata kesalahan. Sama seperti MAE, semakin rendahnya nilai root mean square error juga menandakan semakin baik model tersebut dalam melakukan prediksi. RMSE adalah aturan penilaian kuadrat yang juga mengukur besarnya rata-rata kesalahan. Sama seperti MAE, semakin rendahnya nilai root mean square error juga menandakan semakin baik model tersebut dalam melakukan prediksi.
+- `Akurasi` adalah salah satu metrik untuk mengevaluasi model klasifikasi. Secara informal, akurasi adalah sebagian kecil dari prediksi model kami yang benar. Secara formal, akurasi memiliki definisi sebagai berikut:
+
+![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/rumus%20accuracy.png?raw=true)
+
+Untuk klasifikasi biner, akurasi juga dapat dihitung dalam hal positif dan negatif sebagai berikut:
+
+![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/rumus%20akurasi.png?raw=true)
+
+Dimana TP = Positif Benar, TN = Negatif Benar, FP = Positif Palsu, dan FN = Negatif Palsu.
+
+Dalam proyek ini, pada model Popularity Based Recommender System, nilai akurasi menggunakan data dari variabel data_sort['score']. Berikut adalah nilai metrik evaluasi akurasi pada model popularity based recommender system :
+
+![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/hasil%20akurasi.png?raw=true)
+
+
+- `Presisi` adalah rasio prediksi benar positif dibandingkan dengan keseluruhan hasil yang diprediksi positf. 
+
+![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/rumus%20precision.png?raw=true)
+
+Berikut adalah nilai metrik evaluasi presisi pada model popularity based recommender system :
+
+
+![image](https://github.com/fadlinisasiGit/Laporan-Proyek-Machine-Learning-2/blob/main/hasil%20presisi.png?raw=true)
+
+
+- ` root-mean-square deviation (RMSD) atau root-mean-square error (RMSE) ` adalah aturan penilaian kuadrat yang juga mengukur besarnya rata-rata kesalahan. Sama seperti MAE, semakin rendahnya nilai root mean square error juga menandakan semakin baik model tersebut dalam melakukan prediksi. RMSE adalah aturan penilaian kuadrat yang juga mengukur besarnya rata-rata kesalahan. Sama seperti MAE, semakin rendahnya nilai root mean square error juga menandakan semakin baik model tersebut dalam melakukan prediksi.
 
 Rumus RMSE :
 
